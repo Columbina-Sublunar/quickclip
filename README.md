@@ -1,6 +1,13 @@
 # QuickClip
 
+[English Version](README.en.md)
+
 轻量桌面剪贴板 / 代码片段管理工具，方便 CLI 用户快速复制常用命令、文件路径。
+
+## 下载
+
+- 最新版本: [v0.1.0](https://github.com/Columbina-Sublunar/quickclip/releases/tag/v0.1.0)
+- Windows 安装包: [QuickClip_0.1.0_x64-setup.exe](https://github.com/Columbina-Sublunar/quickclip/releases/download/v0.1.0/QuickClip_0.1.0_x64-setup.exe)
 
 ## 技术栈
 
@@ -46,4 +53,4 @@ pnpm tauri build
 
 - Tauri 2 权限需在 `src-tauri/capabilities/default.json` 中显式声明单项权限, 不可依赖 `:default` 组合权限 (已踩坑: sql, clipboard-manager, global-shortcut)
 - 数据库初始化使用迁移检测: 旧版 `file_type CHECK` 约束自动迁移为无约束版本
-- 工作目录代理: cargo 操作需通过 3067 端口代理 (`$env:HTTPS_PROXY`)
+- 开发环境 cargo 操作需通过 3067 端口代理
