@@ -1,0 +1,73 @@
+export const en = {
+  "app.title": "QuickClip",
+
+  "sidebar.categories": "Categories",
+  "sidebar.all": "All",
+  "sidebar.new_category": "New category",
+  "sidebar.category_name": "Category name",
+  "sidebar.add": "Add",
+  "sidebar.rename_category": "Rename category",
+  "sidebar.save": "Save",
+
+  "search.placeholder": "Search snippets...",
+  "shortcut.hint": "Ctrl+Alt+C",
+
+  "snippet.new": "New",
+  "snippet.edit_title": "Edit snippet",
+  "snippet.new_title": "New snippet",
+  "snippet.title": "Title",
+  "snippet.type": "Type",
+  "snippet.text": "Text",
+  "snippet.file": "File",
+  "snippet.content": "Content",
+  "snippet.content_placeholder": "Paste your command or text here...",
+  "snippet.select_file": "Select file",
+  "snippet.category": "Category",
+  "snippet.select_category": "Select a category",
+  "snippet.no_categories": "No categories yet",
+  "snippet.remark": "Remark (optional)",
+  "snippet.remark_placeholder": "Add a note...",
+  "snippet.cancel": "Cancel",
+  "snippet.saving": "Saving...",
+  "snippet.update": "Update",
+  "snippet.create": "Create",
+  "snippet.stored_locally": "File stored locally",
+  "snippet.empty": "Empty snippet",
+  "snippet.show_less": "Show less",
+  "snippet.show_more": "Show more",
+  "snippet.copy": "Copy",
+  "snippet.edit": "Edit",
+  "snippet.delete": "Delete",
+
+  "delete.title": "Delete snippet",
+  "delete.confirm": "Are you sure you want to delete this snippet? This action cannot be undone.",
+
+  "preview.not_available": "Preview not available",
+  "preview.loading": "Loading preview...",
+
+  "empty.no_snippets": "No snippets yet",
+  "empty.no_match": "No snippets match your search",
+  "empty.create_first": "Create first snippet",
+
+  "toast.category_created": "Category created",
+  "toast.category_deleted": "Category deleted",
+  "toast.snippet_created": "Snippet created",
+  "toast.snippet_updated": "Snippet updated",
+  "toast.snippet_deleted": "Snippet deleted",
+  "toast.failed_load_categories": "Failed to load categories",
+  "toast.failed_load_snippets": "Failed to load snippets",
+  "toast.failed_create_category": "Failed to create category",
+  "toast.failed_rename_category": "Failed to rename category",
+  "toast.failed_delete_category": "Failed to delete category",
+  "toast.failed_create_snippet": "Failed to create snippet",
+  "toast.failed_update_snippet": "Failed to update snippet",
+  "toast.failed_delete_snippet": "Failed to delete snippet",
+  "toast.copy_path": "File path copied to clipboard",
+  "toast.copy_content": "Content copied to clipboard",
+  "toast.copy_failed": "Copy failed",
+
+  "language.switch_to": "中文",
+};
+
+export type TranslationKeys = keyof typeof en;
+export type Translations = typeof en;
