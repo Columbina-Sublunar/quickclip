@@ -341,7 +341,7 @@ function App() {
 
       for (const s of data.snippets) {
         if (s.backupFile && s.type === "file") {
-          const sourcePath = `${dir}\\${s.backupFile}`;
+          const sourcePath = `${dir}/${s.backupFile}`;
           const destPath = await invoke<string>("copy_file_to_storage", { sourcePath });
           s.file_path = destPath;
         }
