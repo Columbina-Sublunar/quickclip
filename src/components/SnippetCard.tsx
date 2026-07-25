@@ -19,6 +19,7 @@ import {
   Trash2,
   Check,
   FileDown,
+  Pin,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Snippet } from "@/lib/types";
@@ -45,9 +46,10 @@ interface SnippetCardProps {
   onCopy: (snippet: Snippet) => Promise<void>;
   onEdit: (snippet: Snippet) => void;
   onDelete: (id: string) => void;
+  onTogglePin?: (id: string) => void;
 }
 
-export function SnippetCard({ snippet, onCopy, onEdit, onDelete }: SnippetCardProps) {
+export function SnippetCard({ snippet, onCopy, onEdit, onDelete, onTogglePin }: SnippetCardProps) {
   const { t } = useLanguage();
   const [copied, setCopied] = useState(false);
   const { icon: Icon, color } = getFileIcon(snippet.file_type);
@@ -82,6 +84,15 @@ export function SnippetCard({ snippet, onCopy, onEdit, onDelete }: SnippetCardPr
         </div>
 
         <div className="flex items-center gap-1 shrink-0">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-7 w-7"
+            onClick={() => onTogglePin?.(snippet.id)}
+            title={snippet.is_pinned ? t("snippet.unpin") : t("snippet.pin")}
+          >
+            <Pin className={cn("h-3.5 w-3.5", snippet.is_pinned && "fill-foreground")} />
+          </Button>
           <Button
             variant={copied ? "secondary" : "ghost"}
             size="icon"

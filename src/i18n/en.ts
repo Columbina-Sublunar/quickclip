@@ -67,6 +67,34 @@ export const en = {
   "toast.copy_failed": "Copy failed",
 
   "language.switch_to": "中文",
+
+  "settings.title": "Settings",
+  "settings.language": "Language",
+  "settings.autostart": "Launch at startup",
+  "settings.export_backup": "Export backup",
+  "settings.import_backup": "Import backup",
+
+  "theme.toggle": "Toggle theme",
+
+  "snippet.pin": "Pin",
+  "snippet.unpin": "Unpin",
+  "category.pin": "Pin category",
+  "category.unpin": "Unpin category",
+
+  "import.replace": "Replace",
+  "import.merge": "Merge",
+  "import.select_backup": "Select backup folder",
+  "import.confirm_replace": "This will replace all current data with the backup. Continue?",
+  "import.confirm_merge": "Merge import will update existing data by ID and add new items. Continue?",
+
+  "toast.pinned": "Pinned",
+  "toast.unpinned": "Unpinned",
+  "toast.backup_exported": "Backup exported",
+  "toast.backup_imported": "Backup restored successfully",
+  "toast.backup_imported_merge": "Data merged successfully",
+  "toast.failed_export": "Export failed",
+  "toast.failed_import": "Import failed",
+  "toast.invalid_backup": "Invalid backup data",
 };
 
 export type TranslationKeys = keyof typeof en;

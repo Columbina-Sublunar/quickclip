@@ -67,6 +67,34 @@ export const zh = {
   "toast.copy_failed": "复制失败",
 
   "language.switch_to": "English",
+
+  "settings.title": "设置",
+  "settings.language": "语言",
+  "settings.autostart": "开机自启",
+  "settings.export_backup": "导出备份",
+  "settings.import_backup": "导入备份",
+
+  "theme.toggle": "切换主题",
+
+  "snippet.pin": "置顶",
+  "snippet.unpin": "取消置顶",
+  "category.pin": "置顶分类",
+  "category.unpin": "取消置顶",
+
+  "import.replace": "覆盖导入",
+  "import.merge": "合并导入",
+  "import.select_backup": "选择备份文件夹",
+  "import.confirm_replace": "此操作将用备份替换当前所有数据。是否继续？",
+  "import.confirm_merge": "合并导入会按 ID 更新已有数据并添加新条目。是否继续？",
+
+  "toast.pinned": "已置顶",
+  "toast.unpinned": "已取消置顶",
+  "toast.backup_exported": "备份已导出",
+  "toast.backup_imported": "备份已恢复",
+  "toast.backup_imported_merge": "数据已合并",
+  "toast.failed_export": "导出失败",
+  "toast.failed_import": "导入失败",
+  "toast.invalid_backup": "无效的备份数据",
 };
 
 export type TranslationKeys = keyof typeof zh;

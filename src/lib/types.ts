@@ -2,6 +2,7 @@ export interface Category {
   id: string;
   name: string;
   sort_order: number;
+  is_pinned: number;
   created_at: number;
 }
 
@@ -17,6 +18,7 @@ export interface Snippet {
   file_type: FileType;
   category_id: string;
   remark: string;
+  is_pinned: number;
   created_at: number;
   updated_at: number;
 }
@@ -29,6 +31,7 @@ export interface SnippetCreateInput {
   file_type?: FileType;
   category_id: string;
   remark?: string;
+  is_pinned?: number;
 }
 
 export interface SnippetUpdateInput extends Partial<SnippetCreateInput> {}

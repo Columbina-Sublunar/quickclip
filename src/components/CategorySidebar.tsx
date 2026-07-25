@@ -9,7 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useLanguage } from "@/i18n";
-import { Plus, Pencil, Trash2, FolderIcon, ListTodo } from "lucide-react";
+import { Plus, Pencil, Trash2, FolderIcon, ListTodo, Pin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Category } from "@/lib/types";
 
@@ -20,6 +20,7 @@ interface CategorySidebarProps {
   onAddCategory: (name: string) => Promise<void>;
   onRenameCategory: (id: string, name: string) => Promise<void>;
   onDeleteCategory: (id: string) => Promise<void>;
+  onTogglePin?: (id: string) => void;
 }
 
 export function CategorySidebar({
@@ -29,6 +30,7 @@ export function CategorySidebar({
   onAddCategory,
   onRenameCategory,
   onDeleteCategory,
+  onTogglePin,
 }: CategorySidebarProps) {
   const { t } = useLanguage();
   const [newName, setNewName] = useState("");
@@ -94,6 +96,13 @@ export function CategorySidebar({
             </button>
 
             <div className="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-0.5 bg-background/80 backdrop-blur-sm rounded-md px-0.5">
+              <button
+                onClick={() => onTogglePin?.(cat.id)}
+                className="h-6 w-6 inline-flex items-center justify-center rounded hover:bg-accent"
+                title={cat.is_pinned ? t("category.unpin") : t("category.pin")}
+              >
+                <Pin className={cn("h-3 w-3", cat.is_pinned && "fill-foreground")} />
+              </button>
               <button
                 onClick={() => openRename(cat.id, cat.name)}
                 className="h-6 w-6 inline-flex items-center justify-center rounded hover:bg-accent"
